@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const year = parseInt(prompt('Введите год:'))
+
+        let message
+
+        if ((year %4 === 0 && year % 100 !== 0) || (year %400 === 0)) {
+            message = `${year} являетя високосным годом.`
+        } else {
+            message = `${year} НЕ являетя високосным годом.`
+        }
+
+        document.getElementById('result').textContent = message
+
+    </script>
+    
+</body>
+</html>
