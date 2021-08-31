@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #3</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const num1 = parseInt(prompt('Введите первое число:'))
+        const num2 = parseInt(prompt('Введите второе число:'))
+
+        //TODO
+        let message
+
+        if (num1 > num2) {
+            message = `Первое число ${num1} больше второго числа ${num2}.`
+        } else {
+            if (num1 < num2) {
+            message = `Первое число ${num2} больше второго числа ${num1}.`
+            } else {
+                message = `Числа равны.`
+            }
+        }
+        
+        document.getElementById('result').textContent = message
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #8</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const point = parseInt(prompt('Введите количество баллов:'))
+
+        let message
+        if (points >= 90 && points <= 100) {
+            message = 'Оценка А'
+        } else if (points >= 80 && points < 90) {
+            message = 'Оценка B'
+        } else if (points >= 70 && points <  80) {
+            message = 'Оценка c'
+        } else if (points >= 60 && points < 70) {
+            message = 'Оценка D'
+        } else if (points >= 0 && points < 60) {
+            message = 'Оценка F'
+        } else {
+            message = `Занчение ${points} является некоректным`
+        }       
+        
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>

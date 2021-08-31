@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const num = parseInt(prompt("Введите число:"))
+
+        let message
+        if (num % 2 == 0) {
+            message = `Число ${num} является четным.`
+        } else  {
+            message = `Число ${num} является нечетным.`
+        }
+        
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>
