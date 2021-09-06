@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #10</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const month = parseInt(prompt('Введите номер месяца'))
+
+        switch (month) {
+            case 1: message = 'Январь'; break
+            case 2: message = 'Февраль'; break
+            case 3: message = 'Март'; break
+            case 4: message = 'Апрель'; break
+            case 5: message = 'Май'; break
+            case 6: message = 'Июнь'; break
+            case 7: message = 'Июль'; break
+            case 8: message = 'Август'; break
+            case 9: message = 'Сентябрь'; break
+            case 10: message = 'Октябрь'; break
+            case 11: message = 'Ноябрь'; break
+            case 12: message = 'Декабрь'; break
+            default: message = 'Неверный номер месяца'
+        }
+
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>

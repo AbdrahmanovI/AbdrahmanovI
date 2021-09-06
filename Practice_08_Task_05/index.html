@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #5</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let message
+
+        const parts = prompt('Введите набор чисел:').split('')
+        if (parts.length === 0 || parts.length ===1 && parts [0].trian() === '') {
+            message = 'Нет данных для расчета'
+        } else {
+            const res =
+            parts.map(part => parseInt(part))
+                .map(num => num * num)
+                .filter ((sum,next) => sum + next)
+        
+            message = `Сумма квадратов чисел на четных позициях: ${res}`
+        }
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>

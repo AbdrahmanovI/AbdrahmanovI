@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #3</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        function max (... nums) {
+            let res = nums[0]
+            for (const num of nums) {
+                if (num > res) {res = num}
+            }
+            return res
+        }
+
+        let message
+
+        const parts = prompt('Введитечисла для нахождиения максимального').split('')
+        if (parts.length === 0 || parts.length === 1 && parts [0].trim() === '') {
+            message ='Нет данных для нахождения максимального.'
+        } else {
+            const num = []
+            for (const part of parts) {
+                nums.push(parseInt(part))
+            }
+
+            message = `Максимальное значение: ${max(... nums)}`
+        }
+
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>

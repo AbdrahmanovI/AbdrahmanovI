@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #12</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        const month =parseInt(prompt('Введите номер месяца'))
+
+        switch (month) {
+            case 12: case 1: case 2:month
+            message = 'Зима'
+            break
+            switch (month) {
+            case 3: case 4: case 5:month
+            message = 'Весна'
+            break
+            switch (month) {
+            case 6: case 7: case 8:month
+            message = 'Лето'
+            break
+            switch (month) {
+            case 9: case 10: case 11:month
+            message = 'ОСень'
+            break
+            default:
+                message = 'Неверный номер месяца'
+        }
+
+        document.getElementById('result').textContent = message
+    </script>
+</body>
+</html>

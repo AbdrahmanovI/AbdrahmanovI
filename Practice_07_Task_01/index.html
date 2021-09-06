@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #1</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        function random(min,max) {
+            return Math.trunc(min + Math.random() * (max - min +1))
+        }
+        const count =Array(11)
+
+        const n = parseInt(prompt('N:'))
+        for (let i = 0; i < n; i++) {
+            const die1 = random(1, 6)
+            const die2 = random(1,6)
+            const sum = die1 + die2
+            count [sum - 2] ++
+        }
+
+        let message = ''
+        for (let i = 0; i < counts.length; i++) {
+            message += `${i + 2}: ${counts[i]}<br>`
+        }
+
+        document.getElementById('result').innerHTML = message 
+    </script>
+</body>
+</html>

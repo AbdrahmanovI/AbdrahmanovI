@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task #4</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        function numsToString(message,nums) {
+            for (let i = 0; i < nums.length; i++){
+                message += `${nums[i]}`
+            }
+            message += '<br>'
+            return message
+        }
+
+        const n = parseInt(prompt('N:'))
+
+        const nums = Array(n)
+        for (let i = 0; i< nums.length; i++) {
+            nums[i] = parseInt(prompt(`Введите элемент ${i}:`))
+        }
+
+        let message = numsToString('До:', nums)
+
+        for (let i = 0, j = nums.length -1; i < j; i++, j--) {
+            const temp = nums[i]
+            nums[i] = nums [j]
+        }
+        message += numsToString ('После:', nums)
+        
+        document.getElementById('result').innerHTML = message
+    </script>
+</body>
+</html>
